@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amen Brother | Faith You Can Wear</title>
+<meta name="description" content="Gold-on-black Christian streetwear with scripture art. Tees and hoodies printed in Denver.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-line="ab">
+<a class="skip" href="#rail">Skip to the rail</a>
+
+<div class="announce">Free shipping on orders $75+ <span aria-hidden="true">·</span> Printed in Denver</div>
+
+<header class="top">
+  <a class="mark" href="#" aria-label="Amen Brother home">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M6 8h12" /></svg>
+    <span>Amen Brother</span>
+  </a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav aria-label="Main" id="mainNav">
+    <a href="#shop">Shop</a>
+    <a href="#rail">The Rail</a>
+  </nav>
+  <button class="bag-btn" id="bagBtn" aria-label="Open bag, 0 items">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="bag-count" id="bagCount">0</span>
+  </button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="kicker">Drop 01 <span aria-hidden="true">—</span> Printed in Denver</p>
+      <h1>Faith you<br>can <em>wear.</em></h1>
+      <p class="lede">Gold-on-black art with the Word on it. Heavyweight tees and hoodies.</p>
+      <a class="cta" href="#shop">Shop the drop</a>
+    </div>
+    <!-- Swap for Roman's model-wearing photo when it lands: replace this figure's img src. -->
+    <figure class="hero-media" data-hero="faith-over-sight-tee">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <img class="hero-photo" src="photos/faith-over-sight-tee.webp" alt="Man wearing the black Faith Over Sight tee, gold art of Jesus on the water" fetchpriority="high">
+    </figure>
+  </section>
+
+  <section class="shop" id="shop" aria-labelledby="shopH">
+    <div class="sec-head">
+      <h2 id="shopH">Shop the drop</h2>
+      <div class="filters" role="group" aria-label="Filter">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="tee" aria-pressed="false">Tees</button>
+        <button type="button" data-f="hoodie" aria-pressed="false">Hoodies</button>
+      </div>
+    </div>
+    <div class="grid" id="grid" role="list"></div>
+  </section>
+
+  <section class="rail-head" aria-labelledby="railH">
+    <h2 id="railH">The Rail</h2>
+    <p>Hover a piece and it turns to face you.</p>
+  </section>
+
+  <section class="showroom" id="rail" aria-label="The rail">
+    <div class="spot" aria-hidden="true"></div>
+    <div class="rail-bar" aria-hidden="true"><span class="bracket l"></span><span class="bracket r"></span></div>
+    <button class="rail-nav prev" type="button" aria-label="Scroll rail left">‹</button>
+    <button class="rail-nav next" type="button" aria-label="Scroll rail right">›</button>
+    <div class="rail" id="railList" data-line="ab" role="list"></div>
+    <div class="floor" aria-hidden="true"></div>
+    <div class="caption" aria-live="polite"></div>
+  </section>
+
+  <section class="promise" aria-label="Store facts">
+    <div><strong>$5.95</strong><span>flat shipping in the US</span></div>
+    <div><strong>Free</strong><span>shipping on orders $75+</span></div>
+    <div><strong>Denver</strong><span>where every piece is printed</span></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span class="mark small"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M6 8h12" /></svg>Amen Brother</span>
+  <p>Drop 02 is in the works.</p>
+  <p class="todo">Size chart and return policy coming soon.</p>
+  <p class="fine">© 2026 Amen Brother</p>
+</footer>
+
+<!-- Product detail -->
+<dialog class="pdp" id="pdp" aria-labelledby="pdpName">
+  <button class="x" id="pdpClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <div class="pdp-stage" id="pdpStage">
+    <div class="pdp-hold" id="pdpHold"></div>
+    <div class="turn-ctl" role="group" aria-label="View side">
+      <button type="button" data-side="photo" aria-pressed="false">On body</button>
+      <button type="button" data-side="front" aria-pressed="true">Front</button>
+      <button type="button" data-side="back" aria-pressed="false">Back</button>
+    </div>
+    <p class="drag-hint">Drag to turn</p>
+  </div>
+  <div class="pdp-info">
+    <p class="pdp-kind" id="pdpKind"></p>
+    <h2 id="pdpName"></h2>
+    <p class="pdp-price" id="pdpPrice"></p>
+    <blockquote class="pdp-verse"><p id="pdpVerse"></p><cite id="pdpRef"></cite></blockquote>
+    <p class="pdp-blurb" id="pdpBlurb"></p>
+
+    <fieldset class="opt" id="colorSet">
+      <legend>Colour <span id="colorName"></span></legend>
+      <div class="swatches" id="swatches"></div>
+    </fieldset>
+
+    <fieldset class="opt">
+      <legend>Size <span id="sizeName" class="muted">Pick a size</span></legend>
+      <div class="sizes" id="sizes"></div>
+      <p class="size-note">Unisex fit. A measured size chart comes with our first samples.</p>
+    </fieldset>
+
+    <button class="add" id="addBtn" type="button" disabled>Pick a size</button>
+
+    <dl class="facts" id="facts"></dl>
+  </div>
+</dialog>
+
+<!-- Bag -->
+<div class="scrim" id="scrim" hidden></div>
+<aside class="bag" id="bag" aria-labelledby="bagH" aria-hidden="true" inert>
+  <div class="bag-head">
+    <h2 id="bagH">Your bag</h2>
+    <button class="x" id="bagClose" aria-label="Close bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="ship-meter" id="shipMeter">
+    <p id="shipText"></p>
+    <div class="meter"><span id="shipBar"></span></div>
+  </div>
+  <ul class="bag-list" id="bagList"></ul>
+  <div class="bag-foot">
+    <p class="sub"><span>Subtotal</span><strong id="subtotal">$0.00</strong></p>
+    <p class="fine">Shipping and tax are worked out at checkout.</p>
+    <button class="add" id="checkoutBtn" type="button">Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
